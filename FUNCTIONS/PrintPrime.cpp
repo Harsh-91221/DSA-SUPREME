@@ -6,21 +6,21 @@ bool isprime(int n)
     {
         if (n % i == 0)
         {
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 int main()
 {
     int n;
     cin >> n;
-    if (isprime(n))
+    for (int i = 2; i <= n; i++)
     {
-        cout << "NOT PRIME" << endl;
-    }
-    else
-    {
-        cout << "PRIME" << endl;
+        bool check = isprime(i);
+        if (check)
+        {
+            cout << i << " ";
+        }
     }
 }
